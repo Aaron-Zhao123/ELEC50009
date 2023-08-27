@@ -116,6 +116,12 @@ on the NIOSII processor.
     Starting processor at address 0x00010224
     ```
 
+## Task 3: Extensions - Challenges
+
+Having learned to program our system, let’s make something fun. 
+Change the `hello_world.c` code to light up the LEDs in a sequence. 
+For example, you can light up the LEDs from left to right in a specific pattern by controlling the time to light up LED x after having light up LED x-1. Use the two keys (push buttons) to produce two different patterns. Print any related information on the terminal. Think how to produce a delay in lighting up the LEDs.
+You can also think how to use the slide switches and the six 7-segment display to provide more complicated set of patterns
 ## Troubleshooting
 
 * In Quartus, if clicking Tools > NIOS2 Software Biuld Tools has no effect (eg. no window pops up). This is likely because you have not installed NIOS2 Eclipse properly. The new version of Quartus requires a separate install of NIOS2, which you should follow this link to finish your install: https://www.intel.com/content/www/us/en/docs/programmable/683525/21-3/windows-installation.html
