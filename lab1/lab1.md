@@ -195,6 +195,8 @@ You need to associate your design with the physical pins of the Max 10 FPGA on t
 
 ![](./images/pin_loc.png)
 
+![](./images/pin_loc2.png)
+
 ### Step 10: Pin Assignment – the easy way
 
 * Manual pin assignment is tedious and prone to errors.  A much better way to perform pin assignment is to insert a text file with the necessary information directly into the `.qsf` file.
@@ -202,7 +204,8 @@ You need to associate your design with the physical pins of the Max 10 FPGA on t
 * Download from the course webpage: `pin_assignment.txt` to the task1 folder.
 * Click:  Edit > Insert File …   and insert pin_assignment.txt at the end of the file.
 ALL the pins used on the DE10 are assigned here. However, unused pins are ignored.
-Step 11: Compile the design & Programming the FPGA
+
+### Step 11: Compile the design & Programming the FPGA
 * Click Process > Start Compilation.  This will perform all the steps of compilation, placement, routing, fitting etc. and produce a bit-stream file (.sof) ready to blast onto the FPGA.
 * Examine the Compilation Report and you should see a Flow Summary similar to the one shown here.  
  
@@ -211,30 +214,41 @@ Step 11: Compile the design & Programming the FPGA
 
 **Congratulations! You have now completed your design from beginning to the end.**
 
-Put verified modules in mylib
-For the rest of this module, you will design and verify various Verilog modules which you will reuse.  You should copy hex_to_7seg.v (and others in the future) to the “mylib” folder and include them in your new design as necessary.
+**Put verified modules in mylib**
+
+For the rest of this module, you will design and verify various Verilog modules which you will reuse.  You should copy `hex_to_7seg.v` (and others in the future) to the “mylib” folder and include them in your new design as necessary.
+
 Note:  When you perform a compilation, there may be a popup window informing you that some “Chain_x.cdf” file has been modified, and ask if you wish to save it. Just click NO.
  
-Task 2: Explore Netlist Viewer and Timing Analyzer
-Step 1:   Viewing the design
+## Task 2: Explore Netlist Viewer and Timing Analyzer
+
+### Step 1:   Viewing the design
 Quartus Prime provides a graphical view of the synthesized design. Exploring this provides you with some insight into how the Verilog HDL code is turned into actual FPGA hardware.
-•	Click  Tools > Netlist Views > RTL Viewer
+
+* Click  Tools > Netlist Views > RTL Viewer
 This should appear on your screen:
-•	Push down into this block and investigate what is being displayed and how it relates to the decode logic.
+
+    ![](./images/rtl_view.png)
+
+
+* Push down into this block and investigate what is being displayed and how it relates to the decode logic.
 RTL Viewer only shows the abstract Boolean description of the design, not the physical implementation on the FPGA.
-•	Click  Tools > Netlist Views > Technology Map Viewer (post mapping)
+* Click  Tools > Netlist Views > Technology Map Viewer (post mapping)
 Explain what you find and link this back to the Compilation Report.
-Step 2:  Timing Analyzer
+
+### Step 2:  Timing Analyzer
 
 Click  Tools > Timing Analyzer
 
 A Timing Analyzer window will appear.  
+
 Now click Report datasheet.  The Timing Analyzer tool will provide datasheet type table showing the propagation delays of all the paths in your design
 
 Study the results for worst-case delay at different temperature and explain what you found.
 
+![](./images/netlist_view.png)
 
-Step 3:   Test yourself
+### Step 3:   Test yourself
 Create your own design in task2 folder (top-level file is task2_top.v) to display all 10-bit sliding switches as hexadecimal on three of the 7 segment LED displays.  
 
 

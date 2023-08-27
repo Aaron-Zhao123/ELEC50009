@@ -3,10 +3,11 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <h3 align="center">Information Processing Labs (ELEC5009)</h3>
+  <h1 align="center">Information Processing Labs (ELEC5009)</h1>
 
   <p align="center">
     Department of Electrical & Electronic Engineering
+  <p align="center">
     Imperial College London
     <br />
 </div>
@@ -15,7 +16,7 @@
 
 
 
-## About The Lab
+## About the Labs
 
 Originally created by Prof. Christos Bouganis, now renovated by Dr. Aaron Zhao (a.zhao@imperial.ac.uk)
 
