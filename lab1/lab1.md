@@ -59,9 +59,9 @@ Tips:  If you found that the VM window display is too small,  change the viewing
 
 Depending on the resolution of your display and monitor, you may have to change the Video Memory size from 16MB to 64MB. 
 
-![](./virtural_box_1.png)
-![](./virtural_box_2.png)
-![](./virtural_box_3.png)
+![](./images/virtural_box_1.png)
+![](./images/virtural_box_2.png)
+![](./images/virtural_box_3.png)
 
 
 ### Method 2
@@ -86,13 +86,13 @@ Step 2: See the ‘UsingEEMILL3.pdf’ document on learn how to compile on the e
 
 You have been loaned a DE10-Lite.  Connect the DE10 board to your machine using the USB cable provided.  You should see the board LED displays cycling through all digits, showing that the board is working properly.  The diagram below shows the features provided on this board.  Note that the FPGA chip is 10M50DAF484C7G.
 
-![](./altera_max10.png)
+![](./images/altera_max10.png)
  
 ## Task 0: Preparation
 
 In task 1, you will use four slide switches on the right (SW3 to SW0) on the DE10 board as input, and display the 4-bit binary number as a hexadecimal digit on the right-most 7-segment display (HEX0). In task 0, you will check that everything is working properly by directly opening a pre-compiled `.sof` file. 
 
-![](./task0_overview.png)
+![](./images/task0_overview.png)
  
 ### Step 1:  Creating a good directory structure
 
@@ -104,8 +104,9 @@ Before you start carrying out any design for this Lab, it would be very helpful 
     │   ├── task1
     |   │   ├── task1_top.sv
     |   |   └── others.sv
+    │   ├── task2
     │   ├── ...
-    |   └── taskn
+    |   └── mylab 
     ├── lab2 
     ├── lab3
     └── lab4
@@ -127,7 +128,7 @@ Then select: USB Blaster. This is to tell Quartus software that you are using th
 
 If you do not see USB-Blaster under Hardware Setup although the DE10-Lite is plugged in properly, it is most likely that the Device Driver had not been installed or loaded properly. In which case, please see the instruction in the Appendix.
 
-![](./usb_blast.png)
+![](./images/usb_blast.png)
 
 ### Step 4: Blasting the FPGA
 
@@ -135,7 +136,7 @@ Next click the AddFile button.
 
 Navigate to the folder containing the lab1task1_sol.sof file.  Select this.  You should see a display like this:
  
-![](./hardware_setup.png)
+![](./images/hardware_setup.png)
 
 Note that the device indicated here is the one on the DE10 board: 10M50DAF484.
 
@@ -152,49 +153,63 @@ It has the bit-stream to configure (or programme/blast) the FPGA Max10 chip. Onc
 * Create in your home directory the folder `parent_dir/lab1/task1`.  
 * Click file>New Project Wizard, complete the form. Use `task1` as the project name and `task1_top` as top-level design name.  
 * Click Finish.
+
+![](./images/project_wizard.png)
  
 ### Step 6: Device Assignment
 
 Click Assignments -> Device, and select the Max 10 chip used in DE10, which is:  10M50DAF484C7G.  (Interpretation of the device code: 10M is Max10 family. 50 is the size of the device of around 50,000 logic elements.  484 is the number of pins.  C7 is the speed grade.)
  
 ### Step 7: Creating the Verilog specification
-•	In Quartus, create a design file for the decoder module in Verilog HDL as hex_to_7seg.v using:
-File >  New ….  and select Verilog HDL from the list.
-•	Type the Verilog source file as shown here. Make sure that you pay attention to the syntax of Verilog.  Save your file.
-•	At this stage, you check the syntax of your code by clicking:  Process > Analyze current file.  You should get into a habit of ALWAYS perform this step to make sure that the new Verilog module you have created is error free.  It will save you a lot of time later.
-•	Click:  Project > Add Current file to Project to include this module in your design.
-Step 8:  Create Top-Level Specification in Verilog
-•	We need to create a top-level (at chip level) design that make sure of the decoder module. Create the file “task1_top.v” as shown here.  Specify that this is our top-level design with:  
-Project > Set as Top-level Entity ….
-•	Verify that everything works properly with:  Process > Start > Start analysis & elaboration. Make sure that there is no error.  (Warnings often capture potential errors.  However, the Quartus system generates many warnings, and nearly all of which are not important.  Once you have gain confidence in the system, you may start ignoring the warning, but never ignore any error.)
 
-You will save a lot of time if you ALWAYS use these two steps: analyze, and analysis & elaboration, and ensure that ALL errors are dealt with (and warning understood).
-Note:  Every time you create a new entity or module as part of your design, you must include the file in the project.
-•	Click: Project > Add Current Files to Project ….,
+* In Quartus, create a design file for the decoder module in Verilog HDL as hex_to_7seg.v using: File >  New ….  and select Verilog HDL from the list.
+* Type the Verilog source file as shown here. Make sure that you pay attention to the syntax of Verilog. Save your file.
+* At this stage, you check the syntax of your code by clicking:  Process > Analyze current file.  You should get into a habit of ALWAYS perform this step to make sure that the new Verilog module you have created is error free.  It will save you a lot of time later.
+* Click:  Project > Add Current file to Project to include this module in your design.
+
+![](./images/7seg_verilog.png)
+
+### Step 8:  Create Top-Level Specification in Verilog
+
+* We need to create a top-level (at chip level) design that make sure of the decoder module. Create the file “task1_top.v” as shown here.  Specify that this is our top-level design with:  
+Project > Set as Top-level Entity ….
+* Verify that everything works properly with:  Process > Start > Start analysis & elaboration. Make sure that there is no error.  (Warnings often capture potential errors.  However, the Quartus system generates many warnings, and nearly all of which are not important.  Once you have gain confidence in the system, you may start ignoring the warning, but never ignore any error.)
+
+![](./images/top_verilog.png)
+
+**You will save a lot of time if you ALWAYS use these two steps: analyze, and analysis & elaboration, and ensure that ALL errors are dealt with (and warning understood).**
+
+Note:  Every time you create a new entity or module as part of your design, you must include the file in the project. Click: Project > Add Current Files to Project ….,
  
-Step 9: Pin assignment – the hard way
+### Step 9: Pin assignment – the hard way
+
 You need to associate your design with the physical pins of the Max 10 FPGA on the DE10 board.  We will now only assign two of 11 pins used in our design.
-•	Click Assignment > Pin Planner   and a new window with the chip package diagram. You should also see the top-level input/output ports shown as a list.
+
+* Click Assignment > Pin Planner   and a new window with the chip package diagram. You should also see the top-level input/output ports shown as a list.
+* Click on the field shown and select the appropriate values for Location and I/O standard.
+* Close the pin assignment window and click: File > open…  Enter *.* in the file name field and select: task1.qsf (qsf = Quartus Setting File).  Examine its contents.  You should see the effect of the manual pin assignment step as highlighted in RED.
+* The first line defines the physical pin location of HEX0[6]  is PIN_C17.
+* The second line defines the voltage standard used is 3.0V LVTTL.
  
-•	Click on the field shown and select the appropriate values for Location and I/O standard.
-•	Close the pin assignment window and click: File > open…  Enter *.* in the file name field and select: task1.qsf (qsf = Quartus Setting File).  Examine its contents.  You should see the effect of the manual pin assignment step as highlighted in RED.
-•	The first line defines the physical pin location of HEX0[6]  is PIN_C17.
-•	The second line defines the voltage standard used is 3.0V LVTTL.
- 
-Step 10: Pin Assignment – the easy way
-•	Manual pin assignment is tedious and prone to errors.  A much better way to perform pin assignment is to insert a text file with the necessary information directly into the .qsf file.
-•	Delete the four lines highlight above which was created through the manual pin assignment in Step 9.  
-•	Download from the course webpage: pin_assignment.txt to the task1 folder.
-•	Click:  Edit > Insert File …   and insert pin_assignment.txt at the end of the file.
+![](./images/pin_hex.png)
+
+![](./images/pin_loc.png)
+
+### Step 10: Pin Assignment – the easy way
+
+* Manual pin assignment is tedious and prone to errors.  A much better way to perform pin assignment is to insert a text file with the necessary information directly into the `.qsf` file.
+* Delete the four lines highlight above which was created through the manual pin assignment in Step 9.  
+* Download from the course webpage: `pin_assignment.txt` to the task1 folder.
+* Click:  Edit > Insert File …   and insert pin_assignment.txt at the end of the file.
 ALL the pins used on the DE10 are assigned here. However, unused pins are ignored.
 Step 11: Compile the design & Programming the FPGA
-•	Click Process > Start Compilation.  This will perform all the steps of compilation, placement, routing, fitting etc. and produce a bit-stream file (.sof) ready to blast onto the FPGA.
-•	Examine the Compilation Report and you should see a Flow Summary similar to the one shown here.  
+* Click Process > Start Compilation.  This will perform all the steps of compilation, placement, routing, fitting etc. and produce a bit-stream file (.sof) ready to blast onto the FPGA.
+* Examine the Compilation Report and you should see a Flow Summary similar to the one shown here.  
  
-•	This correctly shows that the design used 8 logic elements (out of nearly 50,000) and 11 pins.
-•	Programme the DE10 with YOUR design with the file: task1_top.sof. (See Task 0 if you have forgotten how to do this.)   Test you design.
+* This correctly shows that the design used 8 logic elements (out of nearly 50,000) and 11 pins.
+* Programme the DE10 with YOUR design with the file: task1_top.sof. (See Task 0 if you have forgotten how to do this.)   Test you design.
 
-Congratulations! You have now completed your design from beginning to the end.
+**Congratulations! You have now completed your design from beginning to the end.**
 
 Put verified modules in mylib
 For the rest of this module, you will design and verify various Verilog modules which you will reuse.  You should copy hex_to_7seg.v (and others in the future) to the “mylib” folder and include them in your new design as necessary.
@@ -225,19 +240,21 @@ Create your own design in task2 folder (top-level file is task2_top.v) to displa
 
 	
  
-Appendix  - Installing USB-Blaster Device Drive under Windows 10
+## Appendix  - Installing USB-Blaster Device Drive under Windows 10
 If you are using Quartus under the Virtual Machine, the driver should already been installed, and you should not need to do anything.
+
 If you are installing Quartus directly to your PC running Windows 10, you may need to install the driver manually according to the following steps:
-1.	Plug the USB-Blaster into your PC.
-2.	Open the Device and Printers (Control Panel | Devices and Printers).
-3.	Under Unspecified, USB Blaster should be listed. Right mouse click on this and then select Properties.
-4.	Select the Hardware tab and select Properties.
-5.	A new window should pop up with the General tab already selected. Select Change Settings.
-6.	Again a new window should pop up with the General tab already selected. Select Update.
-7.	Select Browse my computer for driver software.
-8.	Find intelFPGA_lite\20.1\quartus\drivers\ 
-	(Note 1: Your altera file is located at the location you selected when you first installed quartus. The location listed in this document is the default location)
-	(Note 2: Stop at the drivers folder, i.e., do NOT go deeper by opening a folder within the drivers folder)
-1.	Select OK. Make sure the proper path was selected then select Next.
-2.	If the Windows security window pops up, check the Always trust software from “Altera Corporation” box and select Install.
+
+1. Plug the USB-Blaster into your PC.
+2. Open the Device and Printers (Control Panel | Devices and Printers).
+3. Under Unspecified, USB Blaster should be listed. Right mouse click on this and then select Properties.
+4. Select the Hardware tab and select Properties.
+5. A new window should pop up with the General tab already selected. Select Change Settings.
+6. Again a new window should pop up with the General tab already selected. Select Update.
+7. Select Browse my computer for driver software.
+8. Find `intelFPGA_lite\20.1\quartus\drivers\` 
+    - Note 1: Your altera file is located at the location you selected when you first installed quartus. The location listed in this document is the default location
+	- Note 2: Stop at the drivers folder, i.e., do NOT go deeper by opening a folder within the drivers folder)
+9.	Select OK. Make sure the proper path was selected then select Next.
+10.	If the Windows security window pops up, check the Always trust software from “Altera Corporation” box and select Install.
 
