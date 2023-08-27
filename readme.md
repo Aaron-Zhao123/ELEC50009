@@ -49,6 +49,7 @@ If you meet any problems, one should either create an issue or send an email to 
 A quick pointer to all labs.
 
 * [Lab1 Introduction to DE10-Lite and Setting up Quartus Prime Lite](./lab1/lab1.md)
+* [Lab2 Design a NIOS2 System](./lab2/lab2.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
