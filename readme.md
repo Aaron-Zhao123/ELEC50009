@@ -48,8 +48,10 @@ If you meet any problems, one should either create an issue or send an email to 
 
 A quick pointer to all labs.
 
-* [Lab1 Introduction to DE10-Lite and Setting up Quartus Prime Lite](./lab1/lab1.md)
-* [Lab2 Design a NIOS2 System](./lab2/lab2.md)
+* [Lab 1 - Introduction to DE10-Lite and Setting up Quartus Prime Lite](./lab1/lab1.md)
+* [Lab 2 - Design a NIOS2 System](./lab2/lab2.md)
+* [Lab 3 – Integrate an accelerometer with a NIOS](./lab3/lab3.md)
+* [Lab 4 – Communication with host PC through UART](./lab4/lab4.md)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
