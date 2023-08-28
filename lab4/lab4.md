@@ -20,7 +20,7 @@ Please note, that for establishing UART communication between the host PC and NI
 
 This design serves just as an example in case you develop a system that requires more memory than is available on-chip.
 
-There are two sides to the communication, the host side (`host/host.py`) and board side (`jtag-uarttest/software/task2/hello_world_small.c`). 
+There are two sides to the communication, the host side (`host/host.py`) and board side (`jtag-uart-test/software/task2/hello_world_small.c`). 
 The host program sends signals to the board, waits on a response and then processes the response. 
 The board side code polls the UART port for input. Board-Side Code (`jtag-uart-test/software/task2/hello_world_small.c`): 
 
@@ -28,14 +28,14 @@ The board side code presented here is written in conjunction with the python hos
 
 In this design, the NIOS processing is put into a slave mode, responding to commands sent out by the host.
 
-To enable this to work, the hello_world_time_limited.sof can be directly used to program the DE10-Lite board and will directly work for the code described below.
+To enable this to work, the `hello_world_time_limited.sof` can be directly used to program the DE10-Lite board and will directly work for the code described below.
 
 The board-side code performs the following steps:
 
 1. Starting at the main function, go straight to reading the characters being brought in.
 2. The running variable is used to keep the process live and running indefinitely until the QUITLETTER
 variable is sent along the JTAG/UART line (see line 36).
-3. Inside the while loop, alt_getchar() reads from the /dev/jtag_uart port (line 37) by extracting a 
+3. Inside the while loop, `alt_getchar()` reads from the /dev/jtag_uart port (line 37) by extracting a 
 single character. This also stalls the processing until a new character is encountered.
 4. After the first character is received the text buffer gets filled with the input (line 38)
 a. The new character is checked if it is a quitting character (line 20) and is added to the text 
@@ -60,23 +60,22 @@ bash systemcall.
 split along the delimiters provided by the board-side code (line 13), which in this scenario is ‘<-->’, 
 but it can be anything as long as the board-side and host-side code have the same delimiter.
 5. The data inside the delimiters is then returned with all the white-space removed (line 15).
-Most of the processing for the coursework will use variations of the perform_computation that will be used 
-to send and receive data to and from the NIOS processor. 
-Task 2: Extend your Lab 3 system 
-Use the provided example, and integrate the provided infrastructure with your Lab 3 project (i.e. 
-accelerometer). Modify the code so your system can operate between two modes depending on the 
-command received by the host:
-Mode 0: no filtering of the accelerometer data
-Mode 1: filtering the accelerometer data should take place
-Think how the processing of the commands and the rest of the code should be integrated. As you NIOS is 
-polling the jtag, think about the frequency of polling and how this impacts the sampling of the 
-accelerometer. 
-Challenge 1: Add a command to update the coefficients 
-The objective here is to add a new command that enables the host PC to update the coefficients of the FIR 
-filter. As the UART only sees characters, you need to think how to convert a sequence of characters into a 
-number. You may need to have a number of assumptions for your communication such as number of 
-coefficients for transmission and number of digits per coefficient.
-Challenge 2: Add a command to plot accelerometer data in real-time 
-The objective here is to add a new command that enables the host PC to plot the accelerometer data 
-(processed or not) in real-time. The command should specify the duration (number of samples to be 
-plotted) so after the execution of the command a new command can be issued.
+
+Most of the processing for the coursework will use variations of the perform_computation that will be used to send and receive data to and from the NIOS processor. 
+
+## Task 2: Extend your Lab 3 system 
+
+Use the provided example, and integrate the provided infrastructure with your Lab 3 project (i.e. accelerometer). Modify the code so your system can operate between two modes depending on the command received by the host:
+
+* Mode 0: no filtering of the accelerometer data
+* Mode 1: filtering the accelerometer data should take place
+
+Think how the processing of the commands and the rest of the code should be integrated. As you NIOS is polling the jtag, think about the frequency of polling and how this impacts the sampling of the accelerometer. 
+
+- Challenge 1: Add a command to update the coefficients 
+
+    The objective here is to add a new command that enables the host PC to update the coefficients of the FIR filter. As the UART only sees characters, you need to think how to convert a sequence of characters into a number. You may need to have a number of assumptions for your communication such as number of coefficients for transmission and number of digits per coefficient.
+
+- Challenge 2: Add a command to plot accelerometer data in real-time 
+
+    The objective here is to add a new command that enables the host PC to plot the accelerometer data (processed or not) in real-time. The command should specify the duration (number of samples to be plotted) so after the execution of the command a new command can be issued.
