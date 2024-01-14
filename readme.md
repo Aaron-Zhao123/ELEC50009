@@ -18,7 +18,7 @@
 
 ## About the Labs
 
-Originally created by Prof. Peter Cheung and Prof. Christos Bouganis, now renovated by Dr. Aaron Zhao (a.zhao@imperial.ac.uk)
+Originally created by Prof. Peter Cheung and Prof. Christos Bouganis, now renovated by Dr. Aaron Zhao (a.zhao@imperial.ac.uk), and reviewed and tested by [Cheng Zhang](https://github.com/ChengZhang-98).
 
 The aim of the module is to enable students to design information processing systems of medium complexity, by considering communication and computation costs, as well as local (embedded) and server-side processing. The module builds upon the materail you have been taught in your EIE year two, and introduces the practical aspects of embedded processing, networking, and databases. The first part of the module consists of a series of practical labs where you will be exposed to the practical aspects of embedded processing, networking and datasets, followed by a practical component (i.e. coursework) with strong emphasis on the design methodolody, where a fully operational processing system needs to be designed.
 
