@@ -46,12 +46,22 @@ If you meet any problems, one should either create an issue or send an email to 
 
 ## Table of Contents
 
-A quick pointer to all labs.
+Quick pointers to all labs.
 
 * [Lab 1 - Introduction to DE10-Lite and Setting up Quartus Prime Lite](./lab1/lab1.md)
 * [Lab 2 - Design a NIOS2 System](./lab2/lab2.md)
 * [Lab 3 – Integrate an accelerometer with a NIOS](./lab3/lab3.md)
 * [Lab 4 – Communication with host PC through UART](./lab4/lab4.md)
+
+Useful links (Imperial Account Required)
+
+* [Resources](https://imperiallondon-my.sharepoint.com/:f:/g/personal/yz10513_ic_ac_uk/EivuqpDvIqpJnvKFal8l7I4Bw8KMjnE3AYVUQ2jDFldXQQ?e=5xNzy5): more on DE10, QSys, etc..
+* [Overall Course Arrangement and Team Allocation](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/EeXL2vujWyNIq_rPQ5NquFoBklvbktWTtKa0k8jd9r4mGA?e=k51enx)
+* [Midterm Assessment Information](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/EZYxCwA6f9pPs0P8x6jdzdQBHreRBkGsYwybCLduB35JCw?e=RNgVvM)
+* [Quartus and Eclipse environment (From Christos)](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/ESb3iJk6fcVGucqFmEXq3iMB25Sn5gvtCNDueLKGZdxgkg?e=cjpOZ6)
+* [Programming environment setup (From Christos)](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/EQ0si9jFQGZBqW0LslvhMbIB6NRpD1DT7MjzSbdgn8FduA?e=ziMSlK)
+* [Team making proposals](https://docs.google.com/spreadsheets/d/1QCRZ6Y3Hjqz4s9_cKqdMVMVoWKL8h18CFGzVUscSlEA/edit?usp=sharing)
+* [Past Projects](https://imperiallondon-my.sharepoint.com/:f:/g/personal/yz10513_ic_ac_uk/EvLDpTaYsSJLpkGH784W21IBuwMT3juIYGr_85FwLDbcOw?e=Ot4hcm)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
