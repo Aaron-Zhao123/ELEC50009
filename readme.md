@@ -65,4 +65,25 @@ Useful links (Imperial Account Required)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Lab schedules
 
+| Wee Number | Date           | Lab Name    | Lab Time |
+|-----------:|----------------|-------------|----------|
+| 2          | 18th Jan (Thu) | Group B lab | 9am-11am |
+| 3          | 23th Jan (Tue) | Group A lab | 4pm-6pm  |
+| 3          | 25th Jan (Thu) | Group B lab | 9am-11am |
+| 4          | 30th Jan (Tue) | Group A lab | 4pm-6pm  |
+| 4          | 1st Feb  (Thu) | Group B lab | 9am-11am |
+| 5          | 6th Feb  (Tue) | Group A lab | 4pm-6pm  |
+| 5          | 8th Feb  (Thu) | Group B lab | 9am-11am |
+| 6          | 14th Fen (Wed) | Lab Oral	  | 10am-12am|
+| 7          | 20th Feb (Tue) | Group A lab | 4pm-6pm  |
+| 7          | 22nd Feb (Thu) | Group B lab | 9am-11am |
+| 8          | 27th Feb (Tue) | Group A lab | 4pm-6pm  |
+| 8          | 29nd Feb (Thu) | Group B lab | 9am-11am |
+| 8          | 5th Mar  (Tue) | Group A lab | 4pm-6pm  |
+| 8          | 7th Mar  (Thu) | Group B lab | 9am-11am |
+| 9          | 12th Mar (Tue) | Group A lab | 4pm-6pm  |
+| 9          | 14th Mar (Thu) | Group B lab | 9am-11am |
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
