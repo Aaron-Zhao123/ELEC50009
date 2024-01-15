@@ -22,7 +22,7 @@ You will be using Intel/Altera software known as Quartus Prime Lite.  There are 
 1. install the virtual machine Virtual Box and run Quartus Prime Lite under Ubuntu on your laptop; 
 2. if you are running Windows 10 or Ubuntu, install Quartus Prime Lite from Intel/Altera natively on your machine without running any virtual machine at all 
 3. install the virtual machine Virtual Box and run Quartus Prime Lite under Ubuntu on your laptop to download and run your design on the FPGA, but using the ee-mill3 servers for compilation.
-4. Use the installation available in Level 1 machines. Please note that you need to have at least two nodes working in your system, so this option alone is not enough and it should be used alongside the other three methods.
+4. **Use the installation available in Level 1 machines.** Please note this is the preferred usage. Due to the variations in personal PCs and desktops, we cannot have the bandwidth to test on all possible platforms.
 
 
 Method 1 is platform independent but will run Quartus slower. If you are a Mac user , this is the best way!  
@@ -40,7 +40,7 @@ Step 1: Download the following files:
 2.	VirtualBox Extension Pack from:  https://www.virtualbox.org/wiki/Downloads
 
 3.	Ubuntu and Quartus Prime Lite virtual machine image (.ova) from:
-https://imperialcollegelondon.box.com/s/psvpgqpmvns1vje37uxs4dhxq2ktins2
+https://imperiallondon-my.sharepoint.com/:u:/g/personal/yz10513_ic_ac_uk/EfmHf6e-adxGvzBuxZI_bjQBPT_H0vvcqOk65pNgVETI9Q?e=7cFb2l
 
 (File name: EE2-Ubuntu18-Quartus20.1-IP-DSD.ova, 25.7GB)
 These are large files. Make sure that you go somewhere with good WIFI connection. You only need to download these files once.  If want to reduce hard disk usage, you may off load these files to a USB or external drive.
