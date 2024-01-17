@@ -41,7 +41,7 @@ If you have followed the above instructions, then you should be able now to comp
 ## Task 2: Program a NIOS II system
 
 > [!TIP]
-> If you failed to launch *NIOS II Software Build Tools for Eclipse*, please refer to the Troubleshooting section at the end of this document.
+> Quartus 18.1 already has eclipse installed, but newer version requires manual installation of Quartus. If you are not using Quartus 18.1 and failed to launch *NIOS II Software Build Tools for Eclipse*, please refer to the Troubleshooting section at the end of this document.
 
 Please follow the instructions of part 2 of the manual. Follow the manual and use the `hello_world_small` example.
 
@@ -57,43 +57,6 @@ Once you reach step 15 on page 44, you can stop following the instructions. At t
         * After this you can regenerate the BSP
         * If everything is properly connected, come back to this window and Refresh Connections and then Resolve Names.
     * If there is a problem with the timestamp, regenerate the BSP
-
----
-> [!TIP]
-> The following 4-9 is for VirtualBox
-
-4. Now open a new terminal window and go to the location of your current
-oject
-   * Assuming your quartus directory is `Documents/lab2/task1`, then your  project will be inside that directory instide `software/hello_world_sw`
-   * You can use the `cd` command to get to the target directory: `cd /home/e2/Documents/lab2/task1/software/hello_world_sw`
-5. Then type the command shell inside the terminal to launch the nios shell
-    * To see what how the shell call works, you can look at the file `/home/e2/.bashrc`
-
-6. Open a new terminal window, and start up another nios shell by typing `shell`
-7. In this same terminal window type `nios2-terminal` This opens up a terminal window connected to the nios2
-8. Return to the terminal window sitting at your `…/software/hello_world_sw`
-directory and type the following: `nios2-download –g hello_world_sw.elf`
-
-* This downloads the `.elf` file onto the FPGA to run the compiled C code
-on the NIOSII processor.
-
-9. If everything is designed correctly, you will see the following in the terminal window where you ran nios2-terminal:
-
-   ```bash
-   Using cable "USB-Blaster [USB-0]", device 1, instance 0x00
-   Pausing target processor: OK
-   Initializing CPU cache (if present)
-   OK
-   Downloaded 29KB in 0.5s (58.0KB/s)
-   Verified OK
-   Starting processor at address 0x00010224
-   ```
-
----
-
-> [!NOTE]
-> The following is for a Native Environment (Windows)
-
 4. Make sure you have your `hello_world_sw` and `hello_world_bsp` ready, and the `.elf` file has already been generated.
 5. Click on the Target Connection tab, and click Refresh Connections, then Resolve Names.
     * The connection should indicate that Eclipse has connected to the USB-blaster.
@@ -105,6 +68,25 @@ on the NIOSII processor.
 7. Click on the Run button, and you should see "hello world" printed on the console tab at the bottom of the Eclipse window:
 
     <img src="./images/cmd_shell_win.png" alt="drawing" width="720"/>
+
+> [!Important]
+> **How to download the `.elf` file to the FPGA board using Terminal**
+> In lab 4 you will be required to download the `.elf` file to the FPGA board and interact with the board using the terminal. The following steps show you how to do this:
+>
+> 1. Open a terminal window (PowerShell on Windows) and execute `Nios II Command Shell.bat` in Quartus installation directory. This will set up the environment for you to use the NIOS II tools.
+>
+>     ```powershell
+>     & 'C:\intelFPGA_lite\23.1std\nios2eds\Nios II Command Shell.bat'
+>     ```
+>
+> 2. Then navigate to the directory where your `.elf` file is located, and use `nios2-download` to download the file to the FPGA board.
+>
+>    ```powershell
+>    cd <your_elf_file_directory>
+>    nios2-download -g <your_elf_file_name>.elf
+>    ```
+>
+> Now you should be able to see the output of your program on the terminal.
 
 ---
 
@@ -119,4 +101,4 @@ You can also think how to use the slide switches and the six 7-segment display t
 
 ## Troubleshooting
 
-In Quartus, if clicking Tools > NIOS2 Software Biuld Tools has no effect (eg. no window pops up). This is likely because you have not installed NIOS2 Eclipse properly. The new version of Quartus requires a separate install of NIOS2, which you should follow this link to finish your install: <https://www.intel.com/content/www/us/en/docs/programmable/683525/21-3/windows-installation.html>
+In Quartus, if clicking Tools > NIOS2 Software Biuld Tools has no effect (eg. no window pops up). This is likely because you have not installed NIOS2 Eclipse properly. The new version of Quartus requires a separate install of NIOS2, which you should follow the instructions at `"C:\intelFPGA_lite\<your_version_number>\nios2eds\bin\README"` to install Eclipse and plugins.
