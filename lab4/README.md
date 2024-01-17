@@ -59,7 +59,7 @@ line ‘\n’ character is encountered.
 3. Following the note in lab2, use Powershell to download the `.elf` file to the DE10-Lite board using the following command.
 4. Try the command `nios2-terminal.exe <<< hello` in the terminal to see if the communication is working. You should see the following output.
 
-    ```terminal
+    ```powershell
     $ nios2-terminal.exe <<< hello
     nios2-terminal: connected to hardware target using JTAG UART on cable
     nios2-terminal: "USB-Blaster [USB-0]", device 1, instance 0
@@ -69,6 +69,12 @@ line ‘\n’ character is encountered.
     ```
 
     The first time may not be successful. If 0 characters are detected, you may try `nios2-terminal.exe <<< hello` again.
+5. In the same powershell, run `python host.py` to start the host program. The program is just a Python script to do the same thing as Step 4, but it also you to parameterize the input string and process the output from the board.
+
+    ```powershell
+    $ python host.py
+    b'\x1b]2;Altera Nios II EDS 18.1 [gcc4]\x07------------------------------------------------\nAltera Nios2 Command Shell [GCC 4]\n\nVersion 18.1, Build 625\n------------------------------------------------\nnios2-terminal: connected to hardware target using JTAG UART on cable\r\nnios2-terminal: "USB-Blaster [USB-0]", device 1, instance 0\r\nnios2-terminal: (Use the IDE stop button or Ctrl-C to terminate)\r\n\r\n<--> Detected 7 characters: testing <--> \r\n \r\n\r\nnios2-terminal: exiting due to ^D on remote\r\n'
+    ```
 
 Most of the processing for the coursework will use variations of the perform_computation that will be used to send and receive data to and from the NIOS processor.
 
