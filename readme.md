@@ -67,7 +67,7 @@ Useful links (Imperial Account Required)
 
 ## Lab schedules
 
-| Wee Number | Date           | Lab Name    | Lab Time |
+| Week Number | Date           | Lab Name    | Lab Time |
 |-----------:|----------------|-------------|----------|
 | 2          | 18th Jan (Thu) | Group B lab | 9am-11am |
 | 3          | 23th Jan (Tue) | Group A lab | 4pm-6pm  |
