@@ -26,6 +26,22 @@ You will be using Intel/Altera software known as Quartus Prime Lite. **The level
     * If your USB-blaster driver is not installed properly by Quartus installer, check the Appendix at the end of this document.
 2. You are using a Linux machine: you can download and install Quartus Prime Lite 18.1 from [the official webset](https://www.intel.com/content/www/us/en/software-kit/665988/intel-quartus-prime-lite-edition-design-software-version-18-1-for-linux.html). Note that depending on your linux version, you may need to install missing dependencies and [fixes USB-blaster driver](https://www.intel.com/content/www/us/en/support/programmable/support-resources/download/dri-usb-b-lnx.html).
 
+Known issues with installations
+
+- Only Quartus 18.1 and 20.1 have been tested and verfieid working. Quartus 20.1+ actually WILL NOT WORK!
+- Quartus 20.1 would require a correct installation of Eclipse, please follow the pdf guide.
+- Windows with 20.1 requires WSL1 (not WSL2).
+- VM (Virtualbox) can be really slow if you do not have a powerful machine, and may encounter JTAG issues depending on the OS you are running (lab4).
+
+Preferred setup (from high to low)
+
+- Win11 + Quartus 18.1 (lab machine setup)
+- Linux + Quartus 20.1/18.1 (laptop)
+- Win11 + Quartus 18.1 (laptop)
+- Win11 + WSL1 + Quartus 20.1 (laptop)
+
+Official GTA support is only provided to lab machines, we do not have the bandwidth to accomondate different OS needs, since we realised many other factors (incorrect wsl install, quartus install) can affect a correct installation.
+
 ### The DE10-Lite FPGA Board
 
 You have been loaned a DE10-Lite.  Connect the DE10 board to your machine using the USB cable provided.  You should see the board LED displays cycling through all digits, showing that the board is working properly.  The diagram below shows the features provided on this board.  Note that the FPGA chip is 10M50DAF484C7G.
