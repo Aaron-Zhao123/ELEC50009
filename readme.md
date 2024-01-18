@@ -51,8 +51,9 @@ Quick pointers to all labs.
 * [Lab 1 - Introduction to DE10-Lite and Setting up Quartus Prime Lite](./lab1/lab1.md)
 * [Lab 2 - Design a NIOS2 System](./lab2/lab2.md)
 * [Lab 3 – Integrate an accelerometer with a NIOS](./lab3/lab3.md)
-* [Lab 4 – AWS, SSH Clients, Client Server Programming (By Sarim)](./lab4/lab4.md)
-* [Lab 5 – Using DynamoDB with EC2, Python based (By Sarim)](./lab5/lab5.pdf)
+* [Lab 4 - Integrate an accelerometer with a NIOS](./lab4/lab4.md)
+* [Lab 5 – AWS, SSH Clients, Client Server Programming (By Sarim)](./lab5)
+* [Lab 6 – Using DynamoDB with EC2, Python based (By Sarim)](./lab6)
 
 Useful links (Imperial Account Required)
 
