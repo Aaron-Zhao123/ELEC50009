@@ -35,8 +35,8 @@ Known issues with installations
 
 Preferred setup (from high to low)
 
+- Linux (life quality improvement) + Quartus 20.1/18.1 (laptop)
 - Win11 + Quartus 18.1 (lab machine setup)
-- Linux + Quartus 20.1/18.1 (laptop)
 - Win11 + Quartus 18.1 (laptop)
 - Win11 + WSL1 + Quartus 20.1 (laptop)
 
