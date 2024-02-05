@@ -20,13 +20,13 @@
 
 Originally created by Prof. Peter Cheung and Prof. Christos Bouganis, now renovated by [Dr. Aaron Zhao](https://aaron-zhao123.github.io/teaching/info_process/) (a.zhao@imperial.ac.uk) and Sarim Baig, and reviewed and tested by [Cheng Zhang](https://github.com/ChengZhang-98).
 
-The aim of the module is to enable students to design information processing systems of medium complexity, by considering communication and computation costs, as well as local (embedded) and server-side processing. The module builds upon the materail you have been taught in your EIE year two, and introduces the practical aspects of embedded processing, networking, and databases. The first part of the module consists of a series of practical labs where you will be exposed to the practical aspects of embedded processing, networking and datasets, followed by a practical component (i.e. coursework) with strong emphasis on the design methodolody, where a fully operational processing system needs to be designed.
+The aim of the module is to enable students to design information processing systems of medium complexity, by considering communication and computation costs, as well as local (embedded) and server-side processing. The module builds upon the materail you have been taught in your EIE year two, and introduces the practical aspects of embedded processing, networking, and databases. The first part of the module consists of a series of practical labs where you will be exposed to the practical aspects of embedded processing, networking and datasets, followed by a practical component (i.e. coursework) with strong emphasis on the design methodology, where a fully operational processing system needs to be designed.
 
 
 Upon successful completion of this module, you will be able to:
 - Develop an embedded system based on a CPU/FPGA
 - Apply signal processing. techniques to a time-series data considering their computational cost
-- Develop the communiction infrastructure between a local node and a server
+- Develop the communication infrastructure between a local node and a server
 - Design a database that communicates with the rest of the system
 - Judge the compute capabilities of different platform
 
@@ -62,7 +62,8 @@ Useful links (Imperial Account Required)
 * [Midterm Assessment Information](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/EZYxCwA6f9pPs0P8x6jdzdQBHreRBkGsYwybCLduB35JCw?e=RNgVvM)
 * [Quartus and Eclipse environment (From Christos, complements to lab1)](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/ESb3iJk6fcVGucqFmEXq3iMB25Sn5gvtCNDueLKGZdxgkg?e=cjpOZ6)
 * [Programming environment setup (From Christos, complements to lab1)](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/EQ0si9jFQGZBqW0LslvhMbIB6NRpD1DT7MjzSbdgn8FduA?e=ziMSlK)
-* [Team making proposals](https://docs.google.com/spreadsheets/d/1QCRZ6Y3Hjqz4s9_cKqdMVMVoWKL8h18CFGzVUscSlEA/edit?usp=sharing)
+<!-- * [Team making proposals](https://docs.google.com/spreadsheets/d/1QCRZ6Y3Hjqz4s9_cKqdMVMVoWKL8h18CFGzVUscSlEA/edit?usp=sharing) -->
+* [Team allocation](https://imperiallondon-my.sharepoint.com/:x:/g/personal/yz10513_ic_ac_uk/EbvenKQySypNjTf31F2G2-oBBB08cDb1sTd7pdVTaYgAEw?e=g3LZJ5)
 * [Past Projects](https://imperiallondon-my.sharepoint.com/:f:/g/personal/yz10513_ic_ac_uk/EvLDpTaYsSJLpkGH784W21IBuwMT3juIYGr_85FwLDbcOw?e=Ot4hcm)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
