@@ -63,7 +63,7 @@ Useful links (Imperial Account Required)
 * [Quartus and Eclipse environment (From Christos, complements to lab1)](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/ESb3iJk6fcVGucqFmEXq3iMB25Sn5gvtCNDueLKGZdxgkg?e=cjpOZ6)
 * [Programming environment setup (From Christos, complements to lab1)](https://imperiallondon-my.sharepoint.com/:w:/g/personal/yz10513_ic_ac_uk/EQ0si9jFQGZBqW0LslvhMbIB6NRpD1DT7MjzSbdgn8FduA?e=ziMSlK)
 <!-- * [Team making proposals](https://docs.google.com/spreadsheets/d/1QCRZ6Y3Hjqz4s9_cKqdMVMVoWKL8h18CFGzVUscSlEA/edit?usp=sharing) -->
-* [Team allocation](https://imperiallondon-my.sharepoint.com/:x:/g/personal/yz10513_ic_ac_uk/EbvenKQySypNjTf31F2G2-oBBB08cDb1sTd7pdVTaYgAEw?e=g3LZJ5)
+* [Team allocation](https://imperiallondon-my.sharepoint.com/:x:/g/personal/yz10513_ic_ac_uk/EbvenKQySypNjTf31F2G2-oBBB08cDb1sTd7pdVTaYgAEw?e=Y7l5aZ)
 * [Past Projects](https://imperiallondon-my.sharepoint.com/:f:/g/personal/yz10513_ic_ac_uk/EvLDpTaYsSJLpkGH784W21IBuwMT3juIYGr_85FwLDbcOw?e=Ot4hcm)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
