@@ -28,8 +28,7 @@ You will be using Intel/Altera software known as Quartus Prime Lite. **The level
 
 Known issues with installations
 
-- Only Quartus 18.1 and 20.1 have been tested and verfieid working. Quartus 20.1+ actually WILL NOT WORK!
-- Quartus 20.1 would require a correct installation of Eclipse, please follow the pdf guide.
+- Only Quartus 18.1 has been tested and verfieid working. Quartus 20.1+ actually WILL NOT WORK!
 - Windows with 20.1 requires WSL1 (not WSL2).
 - VM (Virtualbox) can be really slow if you do not have a powerful machine, and may encounter JTAG issues depending on the OS you are running (lab4).
 
@@ -38,7 +37,6 @@ Preferred setup (from high to low)
 - Linux (life quality improvement) + Quartus 20.1/18.1 (laptop)
 - Win11 + Quartus 18.1 (lab machine setup)
 - Win11 + Quartus 18.1 (laptop)
-- Win11 + WSL1 + Quartus 20.1 (laptop)
 
 Official GTA support is only provided to lab machines, we do not have the bandwidth to accomondate different OS needs, since we realised many other factors (incorrect wsl install, quartus install) can affect a correct installation.
 
