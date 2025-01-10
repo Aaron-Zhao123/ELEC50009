@@ -214,7 +214,7 @@ Create your own design in task2 folder (top-level file is task2_top.v) to displa
 ## Appendix
 
 > [!TIP]
-> **Installing USB-Blaster Device Drive under Windows 10/11**
+> **Installing USB-Blaster Device Driver under Windows 10/11**
 >
 > If you are installing Quartus directly to your PC running Windows 10/11, you may need to install the driver manually according to the following steps:
 >
