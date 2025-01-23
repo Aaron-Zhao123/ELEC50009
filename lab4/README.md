@@ -78,6 +78,12 @@ line ‘\n’ character is encountered.
 
 Most of the processing for the coursework will use variations of the perform_computation that will be used to send and receive data to and from the NIOS processor.
 
+> [!NOTE]
+> The minimal example above shows how to build the UART communication between the host and the board.
+> However, the connection is unstable and far from practical use.
+> 
+> [This blog](https://tomverbeure.github.io/2021/05/08/Write-Your-Own-C-and-Python-Clients-for-Intel-JTAG-UART-with-libjtag_atlantic.html#introduction) shows a proper way: build a client program using the jtag library. The author also wrapped the client in package [intel-jtag-uart](https://pypi.org/project/intel-jtag-uart/). You may use this package instead to complete the following task if you find it struggleing.
+
 ## Task 2: Extend your Lab 3 system
 
 Use the provided example, and integrate the provided infrastructure with your Lab 3 project (i.e. accelerometer). Modify the code so your system can operate between two modes depending on the command received by the host:
